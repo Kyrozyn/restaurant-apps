@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+html, body, main{
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+header{
+    min-height: 80px;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    grid-template-rows: 80px auto;
+}
+
+header ul{
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+}
+
+header li{
+    padding: 15px;
+    border-top: 1px solid black;
+}
+
+.hidden{
+    display: none;
+}
+
+#drawer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+}
+
+header p{
+    line-height: 80px;
+    display: inline-block;
+}
+
+header img{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#hamburger{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+
+
+.jumbotron{
+    margin-top: 5px;
+    width: 100%;
+    min-height: 250px ;
+    background-image: url('./images/heros/hero-image_3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+}
+
+.jumbotron > h1{
+    padding: 20px;
+}
+
+main h2{
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+a{
+    text-decoration: none;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 15px;
+}
+
+footer{
+    text-align: center;
+    min-height: 50px;
+    background-color: #e1ffc2;
+    line-height: 50px;
+}
+
+.skip-link{
+    background-color: #e1ffc2;
+    padding: 10px;
+    position: absolute;
+    top: -100px;
+}
+
+.skip-link:focus{
+    top: 0;
+}
+
+*:focus{
+    outline: 2px solid #092532;
+}
+
+/* style for tablet */
+@media screen and (min-width: 768px){
+    header{
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #hamburger{
+        display: none;
+    }
+
+    #drawer{
+        display: block;
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+
+    nav{
+        min-height: 80px;
+    }
+
+    nav>ul{
+        text-align: right;
+        padding: 0 10px 10px 0;
+    }
+
+    nav li{
+        display: inline-block;
+        padding: 0 10px;
+        line-height: 80px;
+        border-top: none;
+        font-size: 1.5em;
+    }
+
+    main{
+        padding: 0 50px;
+    }
+
+    #restaurant-list{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        font-size: medium;
+    }
+
+    #favorite{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        font-size: medium;
+    }
+
+
+}
+
+/* style for monitor */
+@media screen and (min-width: 1025px){
+
+    #restaurant-list{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        font-size: large;
+    }
+
+    #favorite{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        font-size: large;
+    }
+
+    nav li{
+        font-size: 2em;
+    }
+}
